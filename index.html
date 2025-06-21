@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Material Analyses</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Material Analyses</h1>
+    <form id="analysisForm" action="https://formspree.io/f/your-form-id" method="POST">
+      <div>
+        <label>Select Sample Type:</label><br />
+        <select id="sampleType" required>
+          <option value="" disabled selected>Select...</option>
+          <option value="whole-rock">Whole-rock</option>
+          <option value="in-situ">In-situ</option>
+        </select>
+      </div>
+
+      <div id="methodContainer" style="display:none; margin-top:15px;">
+        <label>Select Method:</label><br />
+        <select id="method" name="method" required>
+          <option value="" disabled selected>Select...</option>
+        </select>
+      </div>
+
+      <div id="labsContainer" style="display:none; margin-top:15px;">
+        <label>Available Labs:</label><br />
+        <select id="labs" name="lab" required>
+          <option value="" disabled selected>Select...</option>
+        </select>
+      </div>
+
+      <div id="contactContainer" style="display:none; margin-top:15px;">
+        <label>Your Name:</label><br />
+        <input type="text" name="name" required /><br /><br />
+        <label>Your Email:</label><br />
+        <input type="email" name="_replyto" required /><br /><br />
+        <label>Message:</label><br />
+        <textarea name="message" rows="4" required>I am interested in the selected analysis and lab.</textarea><br /><br />
+        <button type="submit">Send Inquiry</button>
+      </div>
+    </form>
+    <div id="successMessage" style="display:none; color:green; margin-top:15px;">
+      Thank you! Your inquiry has been sent.
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
